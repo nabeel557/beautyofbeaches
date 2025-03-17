@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="images/icon.png"">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <title>Beauty Of Beaches</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-dark fixed-top fade-in"
+      style="background-color: blue"
+    >
+      <a class="navbar-brand" href="#"
+        ><i
+          class="fas fa-umbrella-beach"
+          style="font-size: 24px; color: yellow"
+        ></i>
+        Beauty Of Beaches</a
+      >
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a
+              class="nav-link"
+              href="index.html"
+              onclick="navigate('Home')"
+              ><i class="fas fa-home"></i> Home</a
+            >
+          </li>
+          <li class="nav-item">
+            
+          </li>
+        
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="Location.html"
+              onclick="navigate('Location')"
+              ><i class="fas fa-map-marker-alt"></i> Location</a
+            >
+          </li>
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+                <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="servicesDropdown"
+                    role="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                >
+                    <i class="fas fa-concierge-bell"></i> Beaches
+                </a>
+                <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+                    <a class="dropdown-item" href="#northSection" onclick="navigateTo('northSection')">
+                        <i class="fas fa-cocktail" style="color: cornflowerblue"></i> North
+                    </a>
+                    <a class="dropdown-item" href="#southSection" onclick="navigateTo('southSection')">
+                        <i class="fas fa-swimmer" style="color: cornflowerblue"></i> South
+                    </a>
+                    <a class="dropdown-item" href="#eastSection" onclick="navigateTo('eastSection')">
+                        <i class="fas fa-map-marked" style="color: cornflowerblue"></i> East
+                    </a>
+                    <a class="dropdown-item" href="#westSection" onclick="navigateTo('westSection')">
+                        <i class="fas fa-globe-asia" style="color: cornflowerblue"></i> West
+                    </a>
+                </div>
+            </li>
+        </ul>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="Feedback.html"
+              onclick="navigate('Feedback')"
+              ><i class="fas fa-comment-alt"></i> Feedback</a
+            >
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="userDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <i class="fas fa-user"></i> Register
+            </a>
+            <div class="dropdown-menu" aria-labelledby="userDropdown">
+              <a
+                class="dropdown-item"
+                href="login.html"
+                onclick="navigate('Login')"
+                target="_blank"
+                ><i class="fas fa-sign-in-alt"></i> Login</a
+              >
+              <a
+                class="dropdown-item"
+                href="signup.html"
+                onclick="navigate('Sign Up')"
+                target="_blank"
+                ><i class="fas fa-user-plus"></i> Sign Up</a
+              >
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <br />
+  
+
+    <!------------------------------------------------------------------------------Slider--------------------------------------------------------------------------------------------------->
+
+    <div class="container">
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner fade-in">
+          <div class="carousel-item active">
+            <img src="images/slider 1.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="images/slider 2.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="images/slider 3.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-----------------------------------------------------------Body----------------------------------------------------------------------------------------->
+    <div class="container">
+      <br />
+      <br />
+      <!-- Your page content goes here -->
+      <h3 class="p fade-in"><strong> What is Beauty of Beaches?</strong></h3>
+
+      <p class="p fade-in">
+        Beaches are often considered beautiful because of their natural
+        features, such as the soothing sound of the waves, the feel of the sand,
+        the vast expanse of the ocean, and the stunning sunsets or sunrises. The
+        combination of these elements often creates a sense of tranquility and
+        relaxation for many people.
+      </p>
+      <hr />
+
+      <h3 class="p fade-in">
+        <strong> What is the best thing about the beach?</strong>
+      </h3>
+
+      <p class="p fade-in">
+        8 Reasons the Beach is the Best Choice for Your Vacation 8 reasons to
+        choose the beach for your next vacation:
+        <li class="p fade-in">
+          You will get in touch with nature. The beach is the best spot to
+          reconnect with nature. ...
+        </li>
+        <li class="p fade-in">Enjoy outdoor beach activities. ...</li>
+        <li class="p fade-in">Free fun. ...</li>
+        <li class="p fade-in">Vitamin D is plentiful. ...</li>
+        <li class="p fade-in">Vacation rentals make life easy. ...</li>
+        <li class="p fade-in">It's chill. ...</li>
+        <li class="p fade-in">Awesome food. ...</li>
+        <li class="p fade-in">Stars and sunsets.</li>
+      </p>
+      <hr />
+
+      <img class="fade-in"
+        src="https://www.travelandleisure.com/thmb/HlNYcpqWt9t1IgQq1eTgJG3hp6k=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/saud-beach-luzon-philippines-WRLDBEACH0421-15e2c368e7ad4495be803bd60cafa379.jpg"
+      />
+      <hr />
+      <br />
+     
+    </div>
+
+    <!----------------------------------------------------------------------------------North Start------------------------------------------------------------------------------------------------------------>
+
+    <div class="container">
+      <h2
+        class="p"
+        style="font-size: 60px; text-decoration: underline; text-align: center"
+      >
+      <section id="northSection">
+        <strong> Beautiful Beaches In North Zone </strong>
+      </h2>
+      <br />
+      <br />
+
+      <h3 class="p fade-in"><strong> 1.Juist Beach </strong></h3>
+      <br />
+      <p class="p fade-in">
+        <strong>Juist is known as the "longest sandbank in the world".</strong>
+        The fine sandy beach is 17 kilometers longof fine sandy beach invite you
+        to take long walks directly by the sea. Spend a day on the beach of
+        Juist, you can also rent a beach chair here and of course swim in the
+        North Sea. Children can play and build sandcastles here.because the
+        North Sea island is great for kite surfing, sailing and windsurfing.
+        Those who like it quieter are guaranteed to find beautiful, secluded
+        spots with a view of the unspoiled nature on the kilometer-long beach.
+      </p>
+      <a href="https://maps.app.goo.gl/nWXSHLpg1cdhTNrK8" target="_blank">
+        <img src="images/juist beach.jpg" class="fade-in"
+      /></a>
+      <br />
+      <br />
+
+      <h3 class="p fade-in"><strong> 2.Bensersiel Beach </strong></h3>
+      <br />
+      <p class="p fade-in">
+        If you are looking for relaxing, the North Sea Heilbad Bensersiel is the
+        right place for you. The white beach and the sound of the water provide
+        you with guaranteed relaxation. The North Sea spa is a real dream for
+        families: while the grown-ups can switch off in the beach chair, the
+        little ones can have a good romp in a playground and two indoor play
+        halls. There is also no lack of sporting activities here. Water sports
+        and activities such as beach volleyball or soccer are offered to the
+        beach guests in many ways.
+      </p>
+      <a href="https://maps.app.goo.gl/fj4XStXvWKyyitNw6" target="_blank"
+        ><img src="images/Bensersiel beach.jpg" class="fade-in"
+      /></a>
+      <br />
+      <br />
+
+      <h3 class="p fade-in"><strong> 3.Family Lagoon Perlebucht </strong></h3>
+      <br />
+      <p class="p fade-in">
+        The "Family Lagoon Perlebucht" was extensively modernized by the city of
+        Büsum and is now one of the most family-friendly beaches on
+        Schleswig-Holstein's North Sea coast. Among other things, a pier, an
+        impressive pier square and a beautiful promenade with benches were
+        built. Of special interest to those seeking a relaxing time with
+        children is the family area, which offers a wide range of playground
+        equipment. A highlight for smaller children is exploring the "Büsumer
+        Krabbe". Playing on the approx. 250 m² climbing landscape will ensure
+        that they never get bored. There is also plenty of water fun: during the
+        summer months, floating bathing islands are anchored in the southern
+        bathing pool. The islands are equipped with many play elements such as
+        slides and jumping towers and provide fun for young and old. Ten
+        barbecue areas, sixteen picnic seating groups and a large campfire
+        circle with numerous benches invite you to end the evening with a cozy
+        dinner.
+      </p>
+      <a href="https://maps.app.goo.gl/THwPrPJNwHZDcJb37" target="_blank"
+        ><img src="images/Family Lagoon Perlebucht.jpg" class="fade-in"
+      /></a>
+      <br />
+      <br />
+
+      <h3 class="p fade-in"><strong> 4.North Sea beach Norddeich </strong></h3>
+      <br />
+      <p class="p fade-in">
+        The breathtakingly beautiful North Sea beach Norddeich, which belongs to
+        the city of Norden, covers eight whole hectares. Plenty of space for
+        building sandcastles, extended beach walks or wonderfully relaxed
+        sunbathing. Between the gently rolling dunes you can find beach chairs,
+        numerous playground equipment for the little ones and a spacious beach
+        volleyball court. In the high season, children's entertainment is also
+        offered, allowing the grown-ups a little break from being parents. Dogs
+        are very welcome here, so the four-legged friends also have a good time.
+        The two-hectare dog beach is not far from the main beach.
+      </p>
+      <a href="https://maps.app.goo.gl/Rta7q64YRDEBtozL7" target="_blank"
+        ><img src="images/North Sea beach Norddeich.jpg" class="fade-in"
+      /></a>
+      <br />
+      <br />
+    </div>
+  </section>
+
+    <!--------------------------------------------------------------------------------North End------------------------------------------------------------------------------------------------------->
+
+    <!--------------------------------------------------------------------------------South Start------------------------------------------------------------------------------------------------------>
+
+    <div class="container">
+      <h2
+        class="p fade_in"
+        style="font-size: 60px; text-decoration: underline; text-align: center"
+      >
+      <section id="southSection">
+        <strong> Beautiful Beaches In South Zone </strong>
+      </h2>
+      <br />
+      <br />
+
+      <h3 class="p fade-in"><strong> 1.Hilton Head Island, South Carolina </strong></h3>
+      <br />
+      <p class="p fade-in">
+        Hilton Head Island, often referred to as simply Hilton Head, is a
+        Lowcountry resort town and barrier island in Beaufort County, South
+        Carolina, United States.It is 20 miles (32 km) northeast of Savannah,
+        Georgia, and 95 miles (153 km) southwest of Charleston.Hilton Head
+        Island is the largest city within the Hilton Head Island-Bluffton-Port
+        Royal,The Harbour Town Lighthouse and Museum marks the southwest tip.
+        The Coastal Discovery Museum features heritage buildings, trees and
+        themed gardens.
+      </p>
+      <a href="https://maps.app.goo.gl/3Nj2G2eAjRb2Z2Zg6" target="_blank"
+        ><img src="images/south beach 1.jpg" class="fade-in"
+      /></a>
+      <br />
+      <br />
+
+      <h3 class="p fade-in"><strong> 2.Myrtle Beach </strong></h3>
+      <br />
+      <p class="p fade-in">
+        Myrtle Beach is a resort city on the east coast of the United States in
+        Horry County, South Carolina. It is located in the center of a long and
+        continuous 60-mile (97 km) stretch of beach known as the "Grand Strand”
+        in the northeastern part of the state. Its year-round population was
+        35,682 as of the 2020 census, making it the 13th-most populous city in
+        South Carolina. Myrtle Beach is one of the major centers of tourism in
+        South Carolina and the United States. The city's warm subtropical
+        climate, miles of beaches, 86 golf courses, and 1,800 restaurants
+        attract over 20 million visitors each year, making Myrtle Beach one of
+        the most visited destinations in the country.
+      </p>
+      <a href="https://maps.app.goo.gl/u6WuszK4KLKMYsTS7" target="_blank"
+        ><img src="images/Myrtle Beach.jpg" class="fade-in"
+      /></a>
+      <br />
+      <br />
+
+      <h3 class="p fade-in"><strong> 3.Stuart Beach </strong></h3>
+      <br />
+      <p class="p fade-in">
+        Stuart Beach is located across from the Elliott Museum and the Florida
+        Oceanographic Coastal Center. The park offers a variety of amenities
+        including covered picnic areas, beach volleyball courts, basketball
+        courts, showers, restrooms and more.
+      </p>
+
+      <a href="//maps.app.goo.gl/X8hmWSCSyC2J5DuG7" target="_blank"
+        ><img src="images/stuart beach.jpeg" class="fade-in"
+      /></a>
+      <br />
+      <br />
+
+      <h3 class="p fade-in"><strong> 4.Tybee Island </strong></h3>
+      <br />
+      <p class="p fade-in">
+        Tybee Island is a city and a barrier island in Chatham County, Georgia,
+        18 miles (29 km) east of Savannah. The name "Tybee Island" is used for
+        both the island and the city, but geographically they are not identical:
+        only part of the island's territory lies within the city. Tybee Island
+        Lighthouse.
+      </p>
+      <a href="https://maps.app.goo.gl/bUxLqgB9V6drrnjq5" target="_blank"
+        ><img src="images/tybee-island-beach.jpg" class="fade-in"
+      /></a>
+      <br />
+      <br />
+    </div>
+  </section>
+
+    <!-------------------------------------------------------------------------------South End----------------------------------------------------------------------------------------------------------------->
+
+    <!------------------------------------------------------------------------------East Start------------------------------------------------------------------------------------------------------------------>
+    <div class="container">
+      <h2
+        class="p fade-in"
+        style="font-size: 60px; text-decoration: underline; text-align: center"
+      >
+      <section id="eastSection">
+        <strong> Beautiful Beaches In East Zone </strong>
+      </h2>
+      <br />
+      <br />
+
+      <h3 class="p fade-in"><strong> 1.Hammonasset Beach State Park </strong></h3>
+      <br />
+      <p class="p fade-in">
+        Hammonasset Beach State Park is a public recreation area occupying two
+        miles of beach front on Long Island Sound in the town of Madison,
+        Connecticut. It is the state's largest shoreline park and one of the
+        most popular attractions in the state, drawing an estimated one million
+        visitors annually. The state park offers beach activities, large
+        campground, and nature center. It is managed by the Connecticut
+        Department of Energy and Environmental Protection.
+      </p>
+      <a href="https://maps.app.goo.gl/wuGXnMYQDVWxPP729" target="_blank"
+        ><img src="images/hammonasset beach.jpg" class="fade-in"
+      /></a>
+      <br />
+      <br />
+
+      <h3 class="p fade-in"><strong> 2.Cape Henlopen State Park</strong></h3>
+      <br />
+      <p class="p fade-in">
+        Cape Henlopen's beaches attract thousands of visitors who enjoy
+        everything from ocean swimming, boating, fishing, and kayaking to
+        clamming, paddle-boarding and wind-surfing. But Cape Henlopen offers
+        more than just the ocean and bays. The park's premiere trails offer
+        hiking and biking exploration.
+      </p>
+      <a href="https://maps.app.goo.gl/N1DP8VqGqKBQe6aL7" target="_blank"
+        ><img src="images/cape henlopen.jpg" class="fade-in"
+      /></a>
+      <br />
+      <br />
+
+      <h3 class="p fade-in"><strong> 3.Canaveral National Seashore </strong></h3>
+      <br />
+      <p class="p fade-in">
+        The Canaveral National Seashore (CANA) is a National Seashore located
+        between New Smyrna Beach and Titusville, Florida, in Volusia and Brevard
+        Counties. The park, located on a barrier island, was created on January
+        3, 1975
+      </p>
+      <a href="https://maps.app.goo.gl/M9vZD5QmrETWdrKK6" target="_blank"
+        ><img src="images/canaveral seashore.jpg" class="fade-in"
+      /></a>
+      <br />
+      <br />
+
+      <h3 class="p fade-in"><strong> 4.El Nido </strong></h3>
+      <br />
+      <p class="p fade-in">
+        El Nido is a Philippine municipality on Palawan island. It’s known for
+        white-sand beaches, coral reefs and as the gateway to the Bacuit
+        archipelago, a group of islands with steep karst cliffs. Miniloc Island
+        is famed for the clear waters of its Small and Big lagoons. Nearby
+        Shimizu Island has fish-filled waters. The area has many dive sites,
+        including Dilumacad Island’s long tunnel leading to an underwater
+        cavern.
+      </p>
+      <a href="https://maps.app.goo.gl/u3LXGF4RmDjT7JF69" target="_blank"
+        ><img src="images/el-nido-phillipines.jpg" class="fade-in"
+      /></a>
+      <br />
+      <br />
+    </div>
+  </section>
+
+    <!----------------------------------------------------------------------------------East End---------------------------------------------------------------------------------------------------->
+
+    <!--------------------------------------------------------------------------------West Start-------------------------------------------------------------------------------------------------->
+
+    <div class="container">
+      <h2
+        class="p fade-in"
+        style="font-size: 60px; text-decoration: underline; text-align: center"
+      >
+      <section id="westSection">
+        <strong> Beautiful Beaches In West Zone </strong>
+      </h2>
+      <br />
+      <br />
+
+      <h3 class="p fade-in"><strong> 1.Turquoise Bay </strong></h3>
+      <br />
+      <p class="p fade-in">
+        The white sand beaches of Turquoise Bay give way to the crystal clear
+        waters of the Ningaloo Reef Lagoon which are brimming with pristine
+        coral gardens just footsteps from the beach. This makes Turquoise Bay
+        one of the Ningaloo region's premier land-based snorkelling sites.
+      </p>
+      <a href="https://maps.app.goo.gl/aXcPWvCsRUuWSUFV8" target="_blank"
+        ><img src="images/West Image.jpg" class="fade-in"
+      /></a>
+      <br />
+      <br />
+
+      <h3 class="p fade-in"><strong> 2.Zuma Beach, California </strong></h3>
+      <br />
+      <p class="p fade-in">
+        Zuma Beach is a county beach at 30000 Pacific Coast Highway in Malibu,
+        California. One of the largest and most popular beaches in Los Angeles
+        County, California, it is known for its long, wide sands and excellent
+        surf. It consistently ranks among the healthiest beaches for clean water
+        conditions in Los Angeles County.
+      </p>
+      <a href="https://maps.app.goo.gl/toAdfcDPbHqEjLqGA" target="_blank"
+        ><img src="images/zuma beach.jpg" class="fade-in"
+      /></a>
+      <br />
+      <br />
+
+      <h3 class="p fade-in"><strong> 3.Little Beach </strong></h3>
+      <br />
+      <p class="p fade-in">
+        Features pristine sand and calm waters set within Two People's Bay
+        Nature Reserve Little Beach is the most picturesque perfect, magical
+        beach in Western Australia. With a combination of white sand, azure
+        water, granite headlands, and greenery, it easily surpasses some famous
+        beaches worldwide.Little Beach Albany, Western Australia, is part of Two
+        Peoples Bay Nature Reserve. We enjoy visiting this hidden beach due to
+        its turquoise water, soft white sand, and beautiful granite rocks.
+      </p>
+      <a href="https://maps.app.goo.gl/E1nYYMV8PeTcW3jq5" target="_blank"
+        ><img src="images/Little beach.jpg" class="fade-in"
+      /></a>
+      <br />
+      <br />
+
+      <h3 class="p fade-in"><strong> 4.Laguna Beach </strong></h3>
+      <br />
+      <p class="p fade-in">
+        Laguna Beach is a small coastal city in Orange County, California. It’s
+        known for its many art galleries, coves and beaches. Main Beach features
+        tide pools and a boardwalk leading to the paths and gardens of nearby
+        Heisler Park. Aliso Beach Park is a popular surf spot. The waters off
+        Crystal Cove State Park are designated as an underwater park. Trails
+        meander through coastal canyons in Laguna Coast Wilderness Park
+      </p>
+      <a href="https://maps.app.goo.gl/VzFAN6YP1hqLXfJT6" target="_blank"><img class="fade-in" src="images/Laguna-Beach.jpg"></a>
+      <br />
+      <br />
+    </div>
+    </section>
+
+    <!---------------------------------------------------------------------Footer---------------------------------------------------------------------------------------->
+
+    <!-- Centered Toast -->
+    <div
+      class="toast"
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="true"
+      data-delay="2000"
+      id="searchToast"
+    >
+      <div class="toast-header">
+        <strong class="mr-auto">Search</strong>
+        <small>Now</small>
+        <button
+          type="button"
+          class="ml-2 mb-1 close"
+          data-dismiss="toast"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="toast-body">Search: <span id="searchResult"></span></div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 fade-in">
+            <h5>Contact Us</h5>
+            <p>
+              <a
+                id="gmail"
+                href="https://mail.google.com/"
+                target="_blank"
+                >nabeelsyedahmed2@gmail.com</a
+              >
+            </p>
+            <p>Phone: +92 1234567890</p>
+          </div>
+          <div class="col-md-4 fade-in">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="index.html" >Home</a></li
+              <!-- Add other page links here -->
+              <li><a href="Location.html" Location</a></li>
+              <li><a href="Feedback.html" >Feedback</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4 fade-in">
+            <h5>Social Media</h5>
+            <a id="a" href="https://www.facebook.com/" target="_blank"
+              ><i class="fab fa-facebook"></i> Facebook</a
+            ><br />
+            <a id="b" href="https://twitter.com/" target="_blank"
+              ><i class="fab fa-twitter"></i> Twitter</a
+            ><br />
+            <a id="c" href="https://www.instagram.com/" target="_blank"
+              ><i class="fab fa-instagram"></i> Instagram</a
+            ><br />
+            <a id="d" href="https://www.snapchat.com/" target="_blank"
+              ><i class="fab fa-snapchat"></i> Snapchat</a
+            ><br />
+            <a id="e" href="https://www.whatsapp.com/" target="_blank"
+              ><i class="fab fa-whatsapp"></i> Whatsapp</a
+            ><br />
+          </div>
+        </div>
+
+        <div style="text-align: center" class="fade-in">&copy; 2024. All rights reserved.</div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="srcipt.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+    const fadeElements = document.querySelectorAll(".fade-in");
+  
+    if (fadeElements.length === 0) {
+      console.error("No elements found with class 'fade-in'");
+      return;
+    }
+  
+    const fadeInObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+  
+    fadeElements.forEach((el) => fadeInObserver.observe(el));
+  });
+    </script>
+
+  </body>
+</html>

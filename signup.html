@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+  <link rel="stylesheet" href="index.html" />
+  <link rel="icon" type="image/x-icon" href="images/icon.png">
+  <title>Beauty Of Beaches</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body id="background">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top fade-in" style="background-color: blue">
+    <a class="navbar-brand" href="#"><i class="fas fa-umbrella-beach" style="font-size: 24px; color: yellow"></i>
+      Beauty Of Beaches</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html" onclick="navigate('Home')"><i class="fas fa-home"></i> Home</a>
+        </li>
+
+
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Location.html" onclick="navigate('Location')"><i class="fas fa-map-marker-alt"></i>
+            Location</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-concierge-bell"></i> Beaches
+          </a>
+          <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+            <a class="dropdown-item" href="#" onclick="navigate('Service 1')"><i class="fas fa-cocktail"
+                style="color: cornflowerblue"></i>
+              North</a>
+            <a class="dropdown-item" href="#" onclick="navigate('Service 2')"><i class="fas fa-swimmer"
+                style="color: cornflowerblue"></i>
+              South</a>
+            <a class="dropdown-item" href="#" onclick="navigate('Service 3')"><i class="fas fa-map-marked"
+                style="color: cornflowerblue"></i>
+              East</a>
+            <a class="dropdown-item" href="#" onclick="navigate('Service 1')"><i class="fas fa-globe-asia"
+                style="color: cornflowerblue"></i>
+              West</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Feedback.html" onclick="navigate('Feedback')"><i class="fas fa-comment-alt"></i>
+            Feedback</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-user"></i> Register
+          </a>
+          <div class="dropdown-menu" aria-labelledby="userDropdown">
+            <a class="dropdown-item" href="login.html" onclick="navigate('Login')"><i class="fas fa-sign-in-alt"></i>
+              Login</a>
+            <a class="dropdown-item" href="signup.html" onclick="navigate('Sign Up')"><i class="fas fa-user-plus"></i>
+              Sign Up</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <br />
+
+  <!----------------------------------------------------------------------------------Signup----------------------------------------------------------------------------------------------------->
+
+  <style>
+    .login-form {
+      background-color: rgba(15, 52, 96, 0.7);
+      /* Transparent background */
+      padding: 40px;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 500px;
+      margin: 50px auto;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+      color: white;
+    }
+
+    /* Form Input Fields */
+    .login-form .form-label {
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: white;
+    }
+
+    .login-form input,
+    .login-form select {
+      background-color: #292e33;
+      color: white;
+      border: 1px solid #ffffff;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .login-form input:focus,
+    .login-form select:focus {
+      border-color: #00adb5;
+      outline: none;
+    }
+
+    /* Submit Button */
+    .login-form .btn {
+      background-color: #00adb5;
+      color: white;
+      font-size: 1.2rem;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: 0.3s ease-in-out;
+    }
+
+    .login-form .btn:hover {
+      background-color: #0097a7;
+    }
+
+    /* Success Message */
+    .message {
+      color: #00adb5;
+      text-align: center;
+      font-size: 1.2rem;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .message.visible {
+      opacity: 1;
+    }
+  </style>
+
+  <body>
+    <form id="signupForm" class="login-form fade-in">
+      <h2 style="color: white; text-align: center;">Signup Form</h2>
+      <br />
+
+      <!-- First Name -->
+      <div class="mb-3">
+        <label for="validationServer01" class="form-label">First Name</label>
+        <input type="text" class="form-control" id="firstName" placeholder="Enter your first name" required />
+      </div>
+
+      <!-- Last Name -->
+      <div class="mb-3">
+        <label for="validationServer02" class="form-label">Last Name</label>
+        <input type="text" class="form-control" id="lastName" placeholder="Enter your last name" required />
+      </div>
+
+      <!-- Username -->
+      <div class="mb-3">
+        <label for="validationServerUsername" class="form-label">Username</label>
+        <div class="input-group">
+          <input type="text" class="form-control" id="username" placeholder="Enter your username" required />
+        </div>
+      </div>
+
+      <!-- Country Dropdown -->
+      <div class="mb-3">
+        <!-- <label for="country" class="form-label">Country</label> -->
+        <select class="form-select" id="country" required>
+          <option value="" disabled selected>Choose your country</option>
+          <option>Pakistan</option>
+          <option>India</option>
+          <option>United States</option>
+          <option>Canada</option>
+          <option>Australia</option>
+          <option>Germany</option>
+          <option>United Kingdom</option>
+          <option>China</option>
+          <option>Japan</option>
+          <option>Brazil</option>
+          <option>South Africa</option>
+          <option>Saudi Arabia</option>
+          <option>Russia</option>
+          <option>France</option>
+          <option>Italy</option>
+          <option>Spain</option>
+          <option>Turkey</option>
+          <option>UAE</option>
+          <option>Qatar</option>
+        </select>
+      </div>
+
+      <!-- City Dropdown -->
+      <div class="mb-3">
+        <!-- <label for="city" class="form-label">City</label> -->
+        <select class="form-select" id="city" required>
+          <option value="" disabled selected>Choose your city</option>
+          <option>Karachi</option>
+          <option>Lahore</option>
+          <option>Islamabad</option>
+          <option>Peshawar</option>
+          <option>Quetta</option>
+          <option>Hyderabad</option>
+          <option>Rawalpindi</option>
+          <option>Sialkot</option>
+          <option>Faisalabad</option>
+          <option>Multan</option>
+          <option>Bahawalpur</option>
+          <option>Sargodha</option>
+          <option>Sheikhupura</option>
+          <option>Gujranwala</option>
+          <option>Murree</option>
+        </select>
+      </div>
+
+      <!-- Zip Code -->
+      <div class="mb-3">
+        <label for="zipCode" class="form-label">Zip Code</label>
+        <input type="text" class="form-control" id="zipCode" placeholder="Enter your zip code" required />
+      </div>
+
+      <!-- Agree to Terms -->
+      <div class="mb-3 form-check">
+        <input class="form-check-input" type="checkbox" id="agreeTerms" required />
+        <label for="agreeTerms" class="form-check-label">Agree to terms and conditions</label>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary">Submit Form</button>
+      </div>
+    </form>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const signupForm = document.getElementById("signupForm");
+
+        signupForm.addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent the form from submitting normally
+
+          // Get field values
+          const firstName = document.getElementById("firstName").value.trim();
+          const lastName = document.getElementById("lastName").value.trim();
+          const username = document.getElementById("username").value.trim();
+          const country = document.getElementById("country").value;
+          const city = document.getElementById("city").value;
+          const zipCode = document.getElementById("zipCode").value.trim();
+          const agreeTerms = document.getElementById("agreeTerms").checked;
+
+          // Validate fields
+          if (!firstName) {
+            alert("Please enter your first name.");
+            return;
+          }
+
+          if (!lastName) {
+            alert("Please enter your last name.");
+            return;
+          }
+
+          if (!username) {
+            alert("Please enter a username.");
+            return;
+          }
+
+          if (!country) {
+            alert("Please select your country.");
+            return;
+          }
+
+          if (!city) {
+            alert("Please select your city.");
+            return;
+          }
+
+          if (!zipCode) {
+            alert("Please enter a valid zip code.");
+            return;
+          }
+
+          if (!agreeTerms) {
+            alert("You must agree to the terms and conditions.");
+            return;
+          }
+
+          // If all validations pass, show success message and prompt
+          setTimeout(() => {
+            alert(`Signup Successful! Welcome, ${firstName} ${lastName}!`);
+            prompt("Your account has been created successfully! Enter a message for the admin:", "Thank you!");
+          }, 500);
+        });
+      });
+
+    </script>
+    <!-------------------------------------------------------------------------------Sign Up End ----------------------------------------------------------------------------------------------------------->
+    <br />
+    <br />
+    <br />
+    <br />
+    <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-delay="2000" id="searchToast">
+      <div class="toast-header">
+        <strong class="mr-auto">Search</strong>
+        <small>Now</small>
+        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">Search: <span id="searchResult"></span></div>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 fade-in">
+            <h5>Contact Us</h5>
+            <p>
+              <a id="gmail" href="https://mail.google.com/mail/" target="_blank">nabeelsyedahmed2@gmail.com</a>
+            </p>
+            <p>Phone: +92 1234567890</p>
+          </div>
+          <div class="col-md-4 fade-in">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="index.html">Home</a></li>
+
+              <!-- Add other page links here -->
+              <li><a href="Location.html">Location</a></li>
+              <li><a href="Feedback.html">Feedback</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4 fade-in">
+            <h5>Social Media</h5>
+            <a id="a" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i>
+              Facebook</a><br />
+            <a id="b" href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i> Twitter</a><br />
+            <a id="c" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i>
+              Instagram</a><br />
+            <a id="d" href="https://www.snapchat.com/" target="_blank"><i class="fab fa-snapchat"></i>
+              Snapchat</a><br />
+            <a id="e" href="https://www.whatsapp.com/" target="_blank"><i class="fab fa-whatsapp"></i>
+              Whatsapp</a><br />
+          </div>
+        </div>
+
+        <div style="text-align:center" class="fade-in">
+          &copy; 2024 Alpha-Group-03. All rights reserved.
+        </div>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="srcipt.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+    const fadeElements = document.querySelectorAll(".fade-in");
+  
+    if (fadeElements.length === 0) {
+      console.error("No elements found with class 'fade-in'");
+      return;
+    }
+  
+    const fadeInObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+  
+    fadeElements.forEach((el) => fadeInObserver.observe(el));
+  });
+    </script>
+  </body>
+
+</html>

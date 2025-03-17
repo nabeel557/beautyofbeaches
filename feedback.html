@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+  <link rel="stylesheet" href="index.html" />
+  <link rel="icon" type="image/x-icon" href="images/icon.png">
+  <title>Beauty Of Beaches</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body id="background">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top fade-in" style="background-color: blue">
+    <a class="navbar-brand" href="#"><i class="fas fa-umbrella-beach" style="font-size: 24px; color: yellow"></i>
+      Beauty Of Beaches</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html" onclick="navigate('Home')"><i class="fas fa-home"></i> Home</a>
+        </li>
+
+
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Location.html" onclick="navigate('Location')"><i class="fas fa-map-marker-alt"></i>
+            Location</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-concierge-bell"></i> Beaches
+          </a>
+          <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+            <a class="dropdown-item" href="#" onclick="navigate('Service 1')"><i class="fas fa-cocktail"
+                style="color: cornflowerblue"></i>
+              North</a>
+            <a class="dropdown-item" href="#" onclick="navigate('Service 2')"><i class="fas fa-swimmer"
+                style="color: cornflowerblue"></i>
+              South</a>
+            <a class="dropdown-item" href="#" onclick="navigate('Service 3')"><i class="fas fa-map-marked"
+                style="color: cornflowerblue"></i>
+              East</a>
+            <a class="dropdown-item" href="#" onclick="navigate('Service 1')"><i class="fas fa-globe-asia"
+                style="color: cornflowerblue"></i>
+              West</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Feedback.html" onclick="navigate('Feedback')"><i class="fas fa-comment-alt"></i>
+            Feedback</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-user"></i> Register
+          </a>
+          <div class="dropdown-menu" aria-labelledby="userDropdown">
+            <a class="dropdown-item" href="login.html" onclick="navigate('Login')"><i class="fas fa-sign-in-alt"></i>
+              Login</a>
+            <a class="dropdown-item" href="signup.html" onclick="navigate('Sign Up')"><i class="fas fa-user-plus"></i>
+              Sign Up</a>
+          </div>
+        </li>
+    </div>
+  </nav>
+  <br />
+  <br />
+  <br />
+  <br />
+  <!------------------------------------------------------------------Navbar ends------------------------------------------------------------------------------------->
+
+
+  <!------------------------------------------------------------------------Feedback------------------------------------------------------------------------------->
+
+  <style>
+    /* Feedback Form Styles */
+    .feedback-container {
+      background-color: rgba(15, 52, 96, 0.7);
+      /* Transparent background */
+      padding: 40px;
+      border-radius: 10px;
+      max-width: 500px;
+      margin: 50px auto;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+      color: white;
+    }
+
+    .feedback-container .form-label {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: white;
+    }
+
+    .feedback-container input,
+    .feedback-container textarea {
+      background-color: #292e33;
+      color: white;
+      border: 1px solid #ffffff;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .feedback-container input:focus,
+    .feedback-container textarea:focus {
+      border-color: #00adb5;
+      outline: none;
+    }
+
+    .feedback-container .btn {
+      background-color: #00adb5;
+      color: white;
+      font-size: 1.2rem;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: 0.3s ease-in-out;
+    }
+
+    .feedback-container .btn:hover {
+      background-color: #0097a7;
+    }
+
+    /* Success Message */
+    .message {
+      text-align: center;
+      color: #00adb5;
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-top: 20px;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .message.visible {
+      opacity: 1;
+    }
+  </style>
+
+  <div class="container feedback-container">
+    <div class="mb-3 fade-in">
+      <label for="email" class="form-label">Email Address</label>
+      <input type="email" class="form-control" id="email" placeholder="name@example.com" required />
+    </div>
+    <div class="mb-3 fade-in">
+      <label for="feedback" class="form-label">Feedback</label>
+      <textarea class="form-control" id="feedback" rows="3" placeholder="Write your feedback here..."
+        required></textarea>
+    </div>
+    <button type="button" id="submitFeedback" class="btn btn-primary btn-lg fade-in">Submit</button>
+    <div id="successMessage" class="message">Feedback Submitted Successfully!</div>
+  </div>
+
+  <script>
+
+    document.getElementById("submitFeedback").addEventListener("click", function () {
+      const email = document.getElementById("email").value.trim();
+      const feedback = document.getElementById("feedback").value.trim();
+      const successMessage = document.getElementById("successMessage");
+
+      // Validation
+      if (!email) {
+        alert("Please enter your email address.");
+        return;
+      }
+
+      if (!validateEmail(email)) {
+        alert("Please enter a valid email address.");
+        return;
+      }
+
+      if (!feedback) {
+        alert("Please provide your feedback.");
+        return;
+      }
+
+      // Show success message and prompt
+      successMessage.classList.add("visible");
+      setTimeout(() => {
+        successMessage.classList.remove("visible");
+        prompt("Thank you for your feedback! If you'd like to leave additional comments, type them here:", "Your feedback is valuable!");
+      }, 2000);
+    });
+
+    function validateEmail(email) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return emailRegex.test(email);
+    }
+  </script>
+
+
+
+  <!----------------------------------------------------------------------Feedback---------------------------------------------------------------------------------->
+
+  <!-----------------------------------------------------------------Footer------------------------------------------------------------------>
+  <br />
+  <br />
+  <br />
+  <br />
+  <!-- Centered Toast -->
+  <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-delay="2000" id="searchToast">
+    <div class="toast-header">
+      <strong class="mr-auto">Search</strong>
+      <small>Now</small>
+      <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">Search: <span id="searchResult"></span></div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 fade-in">
+          <h5>Contact Us</h5>
+          <p>
+            <a id="gmail" href="https://mail.google.com/mail/" target="_blank">nabeelsyedahmed2@gmail.com</a>
+          </p>
+          <p>Phone: +92 1234567890</p>
+        </div>
+        <div class="col-md-4 fade-in">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html">Home</a></li>
+
+            <!-- Add other page links here -->
+            <li><a href="Location.html">Location</a></li>
+            <li><a href="Feedback.html">Feedback</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 fade-in">
+          <h5>Social Media</h5>
+          <a id="a" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i> Facebook</a><br />
+          <a id="b" href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i> Twitter</a><br />
+          <a id="c" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i>
+            Instagram</a><br />
+          <a id="d" href="https://www.snapchat.com/" target="_blank"><i class="fab fa-snapchat"></i> Snapchat</a><br />
+          <a id="e" href="https://www.whatsapp.com/" target="_blank"><i class="fab fa-whatsapp"></i> Whatsapp</a><br />
+        </div>
+      </div>
+
+      <div style="text-align:center" class="fade-in">&copy; 2024. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="srcipt.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+  const fadeElements = document.querySelectorAll(".fade-in");
+
+  if (fadeElements.length === 0) {
+    console.error("No elements found with class 'fade-in'");
+    return;
+  }
+
+  const fadeInObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  fadeElements.forEach((el) => fadeInObserver.observe(el));
+});
+  </script>
+</body>
+
+</html>
+<!--------------------------------------------------------------------------footer------------------------------------------------------------------------------------>
